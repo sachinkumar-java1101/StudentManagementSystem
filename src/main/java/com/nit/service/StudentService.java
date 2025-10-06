@@ -16,8 +16,8 @@ public class StudentService {
  public Page<Student> search(String q, Pageable pageable) {
      String term = q == null ? "" : q.trim();
      if (term.isEmpty()) return repo.findAll(pageable);
-     return repo.findByNameContainingIgnoreCaseOrEmailContainingIgnoreCaseOrCourseContainingIgnoreCase(
-             term, term, term, pageable);
+     return repo.findByNameContainingIgnoreCaseOrEmailContainingIgnoreCaseOrCourseContainingIgnoreCaseOrGenderContainingIgnoreCase(
+             term, term, term,term, pageable);
  }
 
  public Student get(Long id) { return repo.findById(id).orElseThrow(); }

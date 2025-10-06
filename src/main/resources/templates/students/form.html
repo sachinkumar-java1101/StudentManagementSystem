@@ -44,6 +44,12 @@
         <div class="text-danger small" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
       </div>
     </div>
+    
+    <div class="col-md-6">
+        <label class="form-label">Gender</label>
+        <input class="form-control" th:field="*{gender}" placeholder="male/female">
+        <div class="text-danger small" th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></div>
+      </div>
 
     <div class="mt-4 d-flex gap-2">
       <button class="btn btn-primary btn-lg" type="submit">Save</button>

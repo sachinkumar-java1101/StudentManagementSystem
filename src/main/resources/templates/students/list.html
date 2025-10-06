@@ -45,6 +45,7 @@
         <th>Email</th>
         <th>Course</th>
         <th style="width: 90px;">Age</th>
+        <th>Gender</th>
         <th style="width: 180px;">Actions</th>
       </tr>
       </thead>
@@ -55,6 +56,7 @@
         <td th:text="${s.email}">email@example.com</td>
         <td th:text="${s.course}">Course</td>
         <td th:text="${s.age}">20</td>
+        <td th:text="${s.gender}">Gender</td>
         <td>
           <a class="btn btn-warning btn-sm me-1" th:href="@{|/students/${s.id}/edit|}">
             ✏️ Edit

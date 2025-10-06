@@ -19,7 +19,11 @@ public class Student {
 
  @Min(1) @Max(120)
  private int age;
-
+ 
+ 
+ @NotBlank(message="Gender is required")
+ private String gender;
+ 
  // getters & setters
  public Long getId() { return id; }
  public void setId(Long id) { this.id = id; }
@@ -31,4 +35,9 @@ public class Student {
  public void setCourse(String course) { this.course = course; }
  public int getAge() { return age; }
  public void setAge(int age) { this.age = age; }
+ public String getGender() {
+	return gender; 
+ }
+ public void setGender(String  gender) { this.gender = gender; }
+ 
 }
